@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dkwhite"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:layout_gravity="center"
+        android:text="Healthmonitor.com"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/text_web_url"
+        style="@style/TextViewStyle"
+        android:layout_gravity="center"
+        android:text="www.HealthMonitor.com" />
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:text="The leading online health destination for patients, condition sufferers and caregivers." />
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:layout_gravity="center"
+        android:text="----------------------------" />
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:text="Family Medicine Reminder v1.1" />
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:text="The Family Medicine Reminder will help you keep track of everyone’s medicine schedule. " />
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:text="This application is not intended to replace professional medical advice. If you have any health conditions, please talk to your doctor." />
+
+</LinearLayout>

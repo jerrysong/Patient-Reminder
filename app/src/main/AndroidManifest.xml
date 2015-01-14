@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.patientreminder"
+    android:installLocation="internalOnly"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+        <activity
+            android:name="com.example.patientreminder.activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MainActivityTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.ShowPatientsPanelActivity"
+            android:label="@string/text_activity_show_patients_panel"
+            android:parentActivityName="com.example.patientreminder.activity.MainActivity"
+            android:theme="@style/NormalActivityTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.patientreminder.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.RegisterOrEditPatientInfoActivity"
+            android:label="@string/title_activity_register_or_edit_patient_info"
+            android:parentActivityName="com.example.patientreminder.activity.ShowPatientsPanelActivity"
+            android:theme="@style/NormalActivityTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.patientreminder.ShowPatientsPanelActivity" />
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.ShowPrescriptionsPanelActivity"
+            android:label="@string/title_prescription_panel"
+            android:parentActivityName="com.example.patientreminder.activity.ShowPatientsPanelActivity"
+            android:theme="@style/NormalActivityTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.patientreminder.ShowPatientsPanelActivity" />
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.AddPrescriptionProfileActivity"
+            android:label="@string/title_activity_add_new_reminder_profile"
+            android:parentActivityName="com.example.patientreminder.activity.ShowPrescriptionsPanelActivity"
+            android:theme="@style/NormalActivityTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.patientreminder.ShowReminderDetailsActivity" />
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.SetAlarmScheduleActivity"
+            android:label="@string/title_activity_set_alarm_schedule"
+            android:parentActivityName="com.example.patientreminder.activity.AddPrescriptionProfileActivity"
+            android:theme="@style/NormalActivityTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.patientreminder.Activity.AddNewReminderProfile" />
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.TimePicker"
+            android:label="@string/title_activity_time_picker"
+            android:theme="@style/NormalActivityTheme" >
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.TimePickerActivity"
+            android:label="@string/title_activity_time_picker"
+            android:theme="@style/NormalActivityTheme" >
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.AddPrescriptionActivity"
+            android:label="@string/title_fragment_add_prescription"
+            android:theme="@style/NormalActivityTheme" >
+        </activity>
+        <activity android:name="com.example.patientreminder.activity.SetPrescriptionProfileFragment" >
+        </activity>
+        <activity android:name="com.example.patientreminder.activity.SetAlarmScheduleFragment" >
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.ReminderNotifyActivity"
+            android:label="@string/title_activity_reminder_notify"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/NormalActivityTheme" >
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.BrowseHistoryActivity"
+            android:label="@string/title_activity_browse_history"
+            android:theme="@style/NormalActivityTheme" >
+        </activity>
+        <activity
+            android:name="com.example.patientreminder.activity.ShowAboutUsActivity"
+            android:label="@string/title_activity_show_about_us"
+            android:theme="@style/NormalActivityTheme" >
+        </activity>
+
+        <provider
+            android:name="com.example.patientreminder.MyContentProvider"
+            android:authorities="com.example.patientreminder.contentprovider"
+            android:exported="true"
+            android:readPermission="true"
+            android:writePermission="true" />
+
+        <service
+            android:name="com.example.patientreminder.AlarmService"
+            android:enabled="true" />
+        <service
+            android:name="com.example.patientreminder.PendingAlarmService"
+            android:enabled="true" />
+
+        <receiver android:name="com.example.patientreminder.AlarmReceiver" >
+        </receiver>
+        <receiver android:name="com.example.patientreminder.PendingAlarmReceiver" >
+        </receiver>
+        <receiver android:name="com.example.patientreminder.RebootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+       
+    </application>
+
+</manifest>

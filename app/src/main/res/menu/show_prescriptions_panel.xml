@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_menu_add"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Add">
+    </item>
+    <item
+        android:id="@+id/action_update"
+        android:icon="@drawable/ic_menu_info_details"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Set">
+    </item>
+    <item
+        android:id="@+id/action_browse_history"
+        android:icon="@drawable/ic_menu_my_calendar"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Browse">
+    </item>
+
+</menu>
