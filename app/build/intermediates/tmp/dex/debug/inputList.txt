@@ -1,0 +1,2 @@
+/Users/songlingyi/Documents/AndroidWorkspace/PatientReminder/app/build/intermediates/classes/debug
+/Users/songlingyi/Documents/AndroidWorkspace/PatientReminder/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-a45c22a9f239730212a46234ab4880a35430657c.jar

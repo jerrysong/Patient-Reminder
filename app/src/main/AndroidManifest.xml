@@ -36,7 +36,7 @@
             android:theme="@style/NormalActivityTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.patientreminder.MainActivity" />
+                android:value="com.example.patientreminder.activity.MainActivity" />
         </activity>
         <activity
             android:name="com.example.patientreminder.activity.RegisterOrEditPatientInfoActivity"
@@ -45,7 +45,7 @@
             android:theme="@style/NormalActivityTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.patientreminder.ShowPatientsPanelActivity" />
+                android:value="com.example.patientreminder.activity.ShowPatientsPanelActivity" />
         </activity>
         <activity
             android:name="com.example.patientreminder.activity.ShowPrescriptionsPanelActivity"
@@ -54,44 +54,30 @@
             android:theme="@style/NormalActivityTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.patientreminder.ShowPatientsPanelActivity" />
+                android:value="com.example.patientreminder.activity.ShowPatientsPanelActivity" />
         </activity>
-        <activity
-            android:name="com.example.patientreminder.activity.AddPrescriptionProfileActivity"
+        <fragment
+            android:name="com.example.patientreminder.activity.SetPrescriptionProfileFragment"
             android:label="@string/title_activity_add_new_reminder_profile"
             android:parentActivityName="com.example.patientreminder.activity.ShowPrescriptionsPanelActivity"
             android:theme="@style/NormalActivityTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.patientreminder.ShowReminderDetailsActivity" />
-        </activity>
-        <activity
-            android:name="com.example.patientreminder.activity.SetAlarmScheduleActivity"
+        </fragment>
+        <fragment
+            android:name="com.example.patientreminder.activity.SetAlarmScheduleFragment"
             android:label="@string/title_activity_set_alarm_schedule"
             android:parentActivityName="com.example.patientreminder.activity.AddPrescriptionProfileActivity"
             android:theme="@style/NormalActivityTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.patientreminder.Activity.AddNewReminderProfile" />
-        </activity>
-        <activity
-            android:name="com.example.patientreminder.TimePicker"
-            android:label="@string/title_activity_time_picker"
-            android:theme="@style/NormalActivityTheme" >
-        </activity>
-        <activity
-            android:name="com.example.patientreminder.TimePickerActivity"
-            android:label="@string/title_activity_time_picker"
-            android:theme="@style/NormalActivityTheme" >
-        </activity>
+        </fragment>
         <activity
             android:name="com.example.patientreminder.activity.AddPrescriptionActivity"
             android:label="@string/title_fragment_add_prescription"
             android:theme="@style/NormalActivityTheme" >
-        </activity>
-        <activity android:name="com.example.patientreminder.activity.SetPrescriptionProfileFragment" >
-        </activity>
-        <activity android:name="com.example.patientreminder.activity.SetAlarmScheduleFragment" >
         </activity>
         <activity
             android:name="com.example.patientreminder.activity.ReminderNotifyActivity"
